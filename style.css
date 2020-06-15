@@ -34,3 +34,21 @@ body{
     color: white;
     text-decoration: none;
 }
+
+/* Widget in footer */
+.widget-footer{
+    font-size: .8em;
+}
+
+.widget-footer a{
+    color: white;
+}
+
+.widget-footer a:hover{
+    color: white;
+    text-decoration: none;
+}
+
+.widget-footer-titel{
+    font-size: 1.2rem;
+}

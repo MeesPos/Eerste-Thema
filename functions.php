@@ -26,3 +26,32 @@ function register_navwalker(){
 	require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
 }
 add_action( 'init', 'register_navwalker' );
+
+// Widgets Registreren
+function register_widgets() {
+    register_sidebar(
+        array(
+            'id' => 'aside',
+            'name' => __('Widget Aside'),
+            'description' => __('Widget voor het Side Element'),
+            'before_widget' => '<div class="widget-aside">',
+            'after_widget' => '</div>',
+            'before_title' => '<h3 class="widget-titel">',
+            'after_title' => '</h3>'
+        )
+    );
+    register_sidebar(
+        array(
+            'id' => 'footer',
+            'name' => __('Widget Footer'),
+            'description' => __('Widget voor de Footer'),
+            'before_widget' => '<div class="widget-footer">',
+            'after_widget' => '</div>',
+            'before_title' => '<h3 class="widget-footer-titel">',
+            'after_title' => '</h3>'
+        )
+    );
+}
+
+
+add_action( 'init', 'register_widgets' );
