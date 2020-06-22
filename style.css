@@ -72,3 +72,8 @@ body{
 .widget-titel{
     font-size: .7;
 }
+
+/* De meta data van de posts */
+.post-categories{
+    list-style-type: none;
+}

@@ -3,7 +3,7 @@
 function loadCSSandJS() {
     wp_enqueue_style( 'style', get_stylesheet_uri() );
     wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.css' );
-    wp_enqueue_style( 'font MeesThema', 'https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap' );
+    wp_enqueue_style( 'fontMeesThema', 'https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap' );
     wp_enqueue_script('bootstrapjs', get_template_directory_uri() . '/js/bootstrap.min.js', array ( 'jquery' ), 1.1, true);
 }
 
