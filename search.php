@@ -2,8 +2,11 @@
 
 <div class="container-fluid">
     <div class="row">
-        <main class="col-md-9 container">
-            <div class="row p-4">
+        <main class="col-md-9 container p-4">
+            <h2 class="p-4">De zoekresultaten van: <em class="text-primary">
+                    <?php echo get_search_query(); ?>
+                </em></h2>
+            <div class="row">
                 <?php if (have_posts()) :
                     while (have_posts()) : the_post(); ?>
                         <div class="col-md-6">
@@ -15,7 +18,7 @@
                         </div>
                     <?php endwhile;
                 else : ?>
-                    <p>Geen berichten gevonden!</p>
+                    <p class="p-4">Geen berichten gevonden voor</p> <em class="text-primary"><?php echo get_search_query(); ?></em>
                 <?php endif;
                 ?>
             </div>

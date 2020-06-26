@@ -21,6 +21,11 @@ body{
     grid-template-rows: auto 1fr auto;
 }
 
+.form-control{
+    padding: .375rem .75rem;
+    border-radius: .25rem;
+}
+
 .jumbotron{
     background-size: cover;
     background-position: center center;

@@ -11,18 +11,25 @@
                             Dit bericht is geplaatst door: <?php the_author(); ?><br>
                             Datum geplaatst: <?php the_time('j F Y') ?>
                             in: <?php the_category() ?>
+                            met als tags: <?php
+                            $voor = " ";
+                            $sep = " | ";
+                            $after = "";
+                            $id = "";
+                            $tag_list = get_the_tag_list($voor, $sep, $after, $id);
+                            echo $tag_list; ?>
                             <hr>
                             <?php $vorigbericht = get_previous_post();
                             if (!empty($vorigbericht)) : ?> Vorig bericht<br>
                                 <a href="<?php echo the_permalink($vorigbericht->ID); ?>">
-                                &#x25C0; <?php echo apply_filters('de_titel', $vorigbericht->post_title) ?></a>
+                                    &#x25C0; <?php echo apply_filters('de_titel', $vorigbericht->post_title) ?></a>
                             <?php endif ?>
 
                             <hr>
                             <?php $volgendbericht = get_next_post();
                             if (!empty($volgendbericht)) : ?> Volgend bericht<br>
                                 <a href="<?php echo the_permalink($volgendbericht->ID); ?>">
-                                &#x25B6; <?php echo apply_filters('de_titel', $volgendbericht->post_title) ?></a>
+                                    &#x25B6; <?php echo apply_filters('de_titel', $volgendbericht->post_title) ?></a>
                             <?php endif ?>
                         </div>
                         <!-- De inhoud van de post -->
