@@ -31,7 +31,7 @@
                 'walker'            => new WP_Bootstrap_Navwalker(),
             ));
             ?>
-            <form role="search" method="get" id="searchform" class="form-inline my-2 my-lg-0" action="http://localhost/wordpress/">
+            <form role="search" method="get" id="searchform" class="form-inline my-2 my-lg-0" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                 <div>
                     <label class="screen-reader-text" for="s">Zoeken naar:</label>
                     <input class="form-control mr-sm-2" type="search" placeholder="Zoeken" aria-label="Zoeken" value="" name="s" id="s" />
